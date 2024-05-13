@@ -1,0 +1,5 @@
+alex alex instructor
+aa aa student 0:0:16
+zz zz student 123:122:122
+misho lazo student 0:0:9
+rr rr student 0:0:0

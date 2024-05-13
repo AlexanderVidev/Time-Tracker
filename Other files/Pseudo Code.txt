@@ -1,0 +1,45 @@
+Program TimeTrackerSystem
+
+Class User
+    Define properties for username, password, role, userClass, hours, minutes, seconds
+    Initialize user properties with default values
+    Provide constructors to set user properties
+
+Class UserManager
+    Define a list to store Users
+    Define methods for user management:
+        Load users from file
+        Write users to file
+        Encrypt and decrypt user data
+        Get a user by username
+        Create a new user
+        Authenticate a user by username and password, and role
+        Check if a user exists
+        Add a user
+        Edit a user's details
+        Edit a user's time
+        Delete a user
+        View all users or filter by role or class
+
+Class TimeTracker
+    Define properties for currentUser, userManager, startTime, tracking status
+    Methods for time tracking:
+        Start tracking time for the current user
+        Stop tracking and calculate elapsed time
+        Display the current logged time
+        Normalize time to handle overflow of minutes and seconds
+
+Class Menu
+    Define properties for UserManager and TimeTracker
+    Display main menu and handle user interactions:
+        Main menu to choose between Admin and User login, account creation, and exit
+        Admin menu to manage users and their times
+        User menu for time tracking and editing own details
+        Validate time input to ensure correct time format
+
+Main
+    Instantiate UserManager and TimeTracker
+    Initialize TimeTracker with UserManager
+    Display the main menu and process user commands until exit
+
+End Program
