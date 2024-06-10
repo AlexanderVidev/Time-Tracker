@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Interface</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>User Interface</h1>
+    <div>
+        <h2>Time Tracking</h2>
+        <button onclick="startTimer()">Start Timer</button>
+        <button onclick="stopTimer()">Stop Timer</button>
+        <div id="loggedTime">Logged Time: 0h 0m 0s</div>
+    </div>
+    <div>
+        <button onclick="showEditAccount()">Edit Account</button>
+        <a href="php/logout.php">Logout</a>
+    </div>
+    <div id="editAccountForm" style="display: none;">
+        <h2>Edit Account</h2>
+        <form id="editAccount">
+            <input type="text" id="newUsername" placeholder="New Username">
+            <input type="password" id="newPassword" placeholder="New Password">
+            <input type="text" id="newClass" placeholder="New Class">
+            <button type="button" onclick="editAccount()">Save Changes</button>
+        </form>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>

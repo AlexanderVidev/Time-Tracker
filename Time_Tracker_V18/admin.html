@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Admin Interface</h1>
+    <h2>Manage Users</h2>
+    <div id="message" style="display: none;"></div>
+    <button onclick="showCreateAccountForm()">Create Account</button>
+    <table>
+        <thead>
+            <tr>
+                <th onclick="sortTable('username')">Username <span class="sort-arrow">▲</span></th>
+                <th onclick="sortTable('role')">Role <span class="sort-arrow">▲</span></th>
+                <th onclick="sortTable('class')">Class <span class="sort-arrow">▲</span></th>
+                <th onclick="sortTable('loggedTime')">Logged Time <span class="sort-arrow">▲</span></th>
+                <th>Logs</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            <!-- User rows will be populated by JavaScript -->
+        </tbody>
+    </table>
+    <button class="logout-button" onclick="location.href='php/logout.php'">Logout</button>
+
+    <div id="createAccountForm" style="display: none;">
+        <h2>Create Account</h2>
+        <form id="createAccount">
+            <input type="text" id="createUsername" placeholder="Username" required>
+            <input type="password" id="createPassword" placeholder="Password" required>
+            <select id="createRole">
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>
+            <input type="text" id="createClass" placeholder="Class (if student)">
+            <button type="button" onclick="createAccount()">Create Account</button>
+            <button type="button" onclick="hideCreateAccountForm()">Close</button>
+        </form>
+    </div>
+
+    <div id="editUserForm" style="display: none;">
+        <h2>Edit User</h2>
+        <form id="editUser">
+            <input type="text" id="editUsername" placeholder="New Username">
+            <input type="password" id="editPassword" placeholder="New Password">
+            <select id="editRole">
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>
+            <input type="text" id="editClass" placeholder="New Class">
+            <input type="number" id="editHours" placeholder="Hours">
+            <input type="number" id="editMinutes" placeholder="Minutes">
+            <input type="number" id="editSeconds" placeholder="Seconds">
+            <button type="button" onclick="editUserDetails()">Save Changes</button>
+            <button type="button" onclick="hideEditUserForm()">Close</button>
+        </form>
+    </div>
+
+    <div id="viewLogsForm" style="display: none;">
+        <div class="view-logs-header">
+            <h2>View User Logs</h2>
+            <button type="button" onclick="hideViewLogs()">Close</button>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Start Time</th>
+                    <th>End Time</th>
+                    <th>Duration</th>
+                </tr>
+            </thead>
+            <tbody id="logsTableBody">
+                <!-- Logs will be populated by JavaScript -->
+            </tbody>
+        </table>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

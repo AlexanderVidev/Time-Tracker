@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Interface</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Admin Interface</h1>
+    <h2>Manage Users</h2>
+    <div id="message" style="display: none;"></div>
+    <table>
+        <thead>
+            <tr>
+                <th>Username</th>
+                <th>Role</th>
+                <th>Class</th>
+                <th>Logged Time</th>
+                <th>Edit</th>
+                <th>Delete</th>
+            </tr>
+        </thead>
+        <tbody id="userTableBody">
+            <!-- User rows will be populated by JavaScript -->
+        </tbody>
+    </table>
+    <div>
+        <a href="php/logout.php">Logout</a>
+    </div>
+
+    <div id="editUserForm" style="display: none;">
+        <h2>Edit User</h2>
+        <form id="editUser">
+            <input type="text" id="editUsername" placeholder="New Username">
+            <input type="password" id="editPassword" placeholder="New Password">
+            <select id="editRole">
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>
+            <input type="text" id="editClass" placeholder="New Class">
+            <input type="number" id="editHours" placeholder="Hours">
+            <input type="number" id="editMinutes" placeholder="Minutes">
+            <input type="number" id="editSeconds" placeholder="Seconds">
+            <button type="button" onclick="editUserDetails()">Save Changes</button>
+        </form>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Manager</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Welcome to Time Manager</h1>
+    <div id="message" style="display: none;"></div>
+    <div>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="loginUsername" name="username" placeholder="Username" required>
+            <input type="password" id="loginPassword" name="password" placeholder="Password" required>
+            <select id="loginRole" name="role">
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>
+            <button type="button" onclick="loginUser()">Login</button>
+        </form>
+    </div>
+    <div>
+        <h2>Register</h2>
+        <form id="registerForm">
+            <input type="text" id="regUsername" name="username" placeholder="Username" required>
+            <input type="password" id="regPassword" name="password" placeholder="Password" required>
+            <select id="regRole" name="role">
+                <option value="student">Student</option>
+                <option value="instructor">Instructor</option>
+            </select>
+            <input type="text" id="regClass" name="userClass" placeholder="Class (if student)">
+            <button type="button" onclick="registerUser()">Register</button>
+        </form>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
