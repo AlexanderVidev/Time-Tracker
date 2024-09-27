@@ -11,5 +11,6 @@ User Management: Admins can create, edit, and delete users.
 User Interface: Interactive and user-friendly dashboard with real-time updates.
 Security: Secure login and session handling with encryption.
 Database: MySQL backend for storing user and time log data.
+
 Technologies
 C++, PHP, JavaScript, HTML/CSS, MySQL
