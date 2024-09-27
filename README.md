@@ -1,4 +1,5 @@
 Time Tracker Web Application
+
 Author: Aleksandar Videv
 
 Overview
